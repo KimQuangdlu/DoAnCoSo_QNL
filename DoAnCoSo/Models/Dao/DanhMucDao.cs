@@ -16,6 +16,10 @@ namespace Models.Dao
 		{
 			db = new DoAnDbContext();
 		}
+		public List<DanhMuc> ListAll()
+		{
+			return db.DanhMucs.ToList();
+		}
 		public int Insert(DanhMuc entity)
 		{
 			db.DanhMucs.Add(entity);
